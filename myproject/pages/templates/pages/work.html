@@ -1,13 +1,27 @@
-<body style="background-color: #ADD8E6;">
-    
-  </body>
-  
+{% extends 'pages/base.html' %}
+
+{% block title %}Home - My Website{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work Portfolio</title>
+    <style>
+        body {
+            background-color: #ADD8E6;
+        }
+    </style>
+</head>
+<body>
   <div class="container">
     <h1>My Work Portfolio</h1>
     <div class="row">
       <div class="col-md-6 mb-4">
         <div class="card">
-          <%= image_tag "Ai.jpg", class: "image 1", alt: "Project 1" %>
+          <img src="{{ image1_url }}" class="card-img-top image-1" alt="Project 1">
           <div class="card-body">
             <h5 class="card-title">Project 1</h5>
             <p class="card-text">I developed the world's first Artificial Intelligence.</p>
@@ -26,7 +40,7 @@
       </div>
       <div class="col-md-6 mb-4">
         <div class="card">
-          <%= image_tag "youtube.jpg", class: "image 2", alt: "Project 2" %>
+          <img src="{{ image2_url }}" class="card-img-top image-2" alt="Project 2">
           <div class="card-body">
             <h5 class="card-title">Project 2</h5>
             <p class="card-text">Developed backend services for YouTube.</p>
@@ -45,7 +59,7 @@
       </div>
       <div class="col-md-6 mb-4">
         <div class="card">
-          <%= image_tag "fortnite.jpg", class: "image 3", alt: "Project 3" %>
+          <img src="{{ image3_url }}" class="card-img-top image-3" alt="Project 3">
           <div class="card-body">
             <h5 class="card-title">Project 3</h5>
             <p class="card-text">Developed an online multiplayer game similar to Fortnite.</p>
@@ -64,4 +78,6 @@
       </div>
     </div>
   </div>
-  
+</body>
+</html>
+{% endblock %}
